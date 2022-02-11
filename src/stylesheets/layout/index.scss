@@ -1,6 +1,15 @@
 @import "../core/reset.scss";
 @import "../core/variables.scss";
+@import "../core/mixins.scss";
 
 html{
   background-color: $color-primary;
+  font-size: 16px;
+
+  @include desktop{
+    font-size: 1.111111vw;
+  }
 }
+
+
+

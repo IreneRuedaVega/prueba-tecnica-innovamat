@@ -1,4 +1,6 @@
 export type {
-  WorkshopType,
+  SectionType,
   ResourcesType,
+  SectionResponse,
+  ResourceResponseType,
 } from "./common";

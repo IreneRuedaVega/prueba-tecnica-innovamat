@@ -1,0 +1,19 @@
+@import "../core/variables.scss";
+@import "../core/mixins.scss";
+
+.container{
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin: auto;
+
+  @include desktop{
+    padding-left: 11.563rem;
+    padding-right: 11.375rem;
+  }
+
+  @include full-desktop{
+    max-width: 1880px;
+  }
+}
+

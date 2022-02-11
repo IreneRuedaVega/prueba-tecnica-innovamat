@@ -1,16 +1,12 @@
-import type { ResourcesType } from "../types/common";
+import type { SectionResponse } from "../types/common";
 
-interface Workshop{
-  sectionName: string,
-  resources: Array<ResourcesType>
-}
 
-const getDataFromApiWorkshop = ():Promise<Workshop> => {
+const getDataFromApiWorkshop = () => {
   return fetch(
     "https://api.mocklets.com/mock68016/talleres"
   )
     .then((response) => response.json())
-    .then((data) => {
+    .then((data: SectionResponse ) => {      
       return data;
     });
 };
