@@ -24,6 +24,14 @@
       color: $color-secondary;
       line-height: 16px;
       font-weight: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &--eyeSymbol{
+      @include laptop{
+        margin-right: .25rem;
+      }
     }
   }
 }
