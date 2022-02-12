@@ -1,5 +1,6 @@
 //dependencies
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 //data
 import getDataResources from "../data/getDataResources";
 //types
@@ -10,16 +11,12 @@ import Video from "./Video";
 import "../stylesheets/page/detailResources.scss";
 import { backButton } from "../svg/backButton";
 
-type Props = {
-  id: string,
-}
 
-const DetailResource: React.FC<Props> =({
-  id,
-}): React.ReactElement =>{
+function DetailResource(){
+  const { id } = useParams(); 
   const [resourceData, setResourceData] = useState<ResourceResponseType>();
   useEffect(() => {
-    getDataResources(id)
+    getDataResources(`${id}`)
       .then((data) => { 
         setResourceData(data); 
       })

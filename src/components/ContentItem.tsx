@@ -1,10 +1,12 @@
+//dependencies
+import { Link } from "react-router-dom";
 //components
 import SimpleImage from "./SimpleImage";
 //styles
 import "../stylesheets/components/contentItem.scss";
 //svg
 import { heartLike } from "../svg/heartLike";
-import { heart } from "../svg/heart";
+// import { heart } from "../svg/heart";
 
 type Props={
   id?: string;
@@ -21,8 +23,10 @@ const ContentItem: React.FC<Props> = ({
   description,
   image,
 }:Props):React.ReactElement =>{
+
   return(
     <div className="contentContainer">
+      <Link to={`/recursos/${id}`} className="link">
       <div className="contentContainer__content"> 
         <div className="contentContainer__content--imageContainer imageWrapper">
           <SimpleImage src={image} alt={title} className="imageWrapper__img"/>
@@ -36,8 +40,9 @@ const ContentItem: React.FC<Props> = ({
           </p>
         </div>
       </div>
+      </Link>
       <div className="contentContainer__favourite">
-        <span className="heartLike">{heartLike}</span>
+        <span className="contentContainer__favourite--heartLike">{heartLike}</span>
         <span>Favorito</span>
       </div>
     </div>

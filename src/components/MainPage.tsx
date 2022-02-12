@@ -1,4 +1,5 @@
 import "../stylesheets/layout/index.scss";
+import { Route, Routes, Link } from "react-router-dom";
 
 //components
 import DetailResource from "./DetailResource";
@@ -8,11 +9,22 @@ import Workshops from "./Workshops";
 
 function MainPage() {
   return (
-    <>
-      <DetailResource id="75999c8e" />
-      {/* <Workshops /> */}
-      {/* <Corners /> */}
-    </>
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li><Link to="/">Talleres</Link></li>
+            <li><Link to="/rincones">Rincones</Link></li>
+          </ul>
+        </nav>
+      </header>
+      <Routes>
+        <Route path='/' element={<Workshops />} />
+        <Route path='/rincones' element={<Corners />} />
+        <Route path='/recursos/:id' element={<DetailResource />} />
+        <Route path='*' element={<h1>Not Found</h1>} />
+      </Routes>
+    </div>
   );
 }
 

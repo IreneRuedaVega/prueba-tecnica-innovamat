@@ -1,7 +1,7 @@
 //dependencies
 import { useEffect, useState } from "react";
 //data
-import getDataFromApiWorkshop from "../data/getDataFromApiWorkshop";
+import getDataFromApiWorkshops from "../data/getDataFromApiWorkshops";
 //types
 import type { SectionResponse } from "../types/common";
 //components
@@ -11,7 +11,7 @@ import ContentSection from "./ContentSection";
 function  Workshops() {
   const [workshopData, setWorkshopData] = useState<SectionResponse>();
   useEffect(() => {
-    getDataFromApiWorkshop()
+    getDataFromApiWorkshops()
       .then((data) => { 
         setWorkshopData(data); 
       })
