@@ -17,6 +17,8 @@ const DetailResource: React.FC<Props> =({
       })
   }, []);
 
+  console.log("data", resourceData)
+
 
   if(resourceData === undefined) return <p>Cargando...</p>
   return (

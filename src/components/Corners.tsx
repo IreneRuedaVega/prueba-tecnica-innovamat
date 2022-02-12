@@ -1,28 +1,30 @@
 //dependencies
 import { useEffect, useState } from "react";
 //data
-import getDataFromApiWorkshop from "../data/getDataFromApiWorkshop";
+import getDataFromApiCorners from "../data/getDataFromApiCorners";
 //types
 import type { SectionResponse } from "../types/common";
 //components
 import Container from "./Container";
 import ContentSection from "./ContentSection";
 
+
+
 function  Workshops() {
-  const [workshopData, setWorkshopData] = useState<SectionResponse>();
+  const [cornersData, setCornersData] = useState<SectionResponse>();
   useEffect(() => {
-    getDataFromApiWorkshop()
+    getDataFromApiCorners()
       .then((data) => { 
-        setWorkshopData(data); 
+        setCornersData(data); 
       })
   }, []);
 
-  if(workshopData === undefined) return <p>Cargando...</p>
+  if(cornersData === undefined) return <p>Cargando...</p>
 
 
   return (
     <Container>
-      <ContentSection dataContent={workshopData} tag="workshops" />
+      <ContentSection dataContent={cornersData} tag="corners" />
     </Container>
   );
 }
