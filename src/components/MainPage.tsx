@@ -9,9 +9,9 @@ import Workshops from "./Workshops";
 function MainPage() {
   return (
     <>
-      {/* <DetailResource id="75999c8e" /> */}
-      <Workshops />
-      <Corners />
+      <DetailResource id="75999c8e" />
+      {/* <Workshops /> */}
+      {/* <Corners /> */}
     </>
   );
 }

@@ -1,0 +1,62 @@
+@import "../core/variables.scss";
+@import "../core/mixins.scss";
+
+
+.resourceContainer{
+  height: 100vh;
+  &__resourceTitle{
+    display: flex;
+    align-items: center;
+    border: 1px solid $color-line;
+    margin-bottom: 2.063rem;
+    &--button{
+      margin: 1.5rem 1.375rem;
+    }
+    &--title{
+      font-size: $base;
+      font-style: normal;
+      line-height: 21px;
+      margin-bottom: 1.375rem;
+      margin-top: 1.5rem;
+      height: 2.25rem;
+      border-left: 1px solid $color-line;
+      padding-left: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include laptop{
+        font-size: $huge;
+        font-weight: bold;
+        line-height: 28px;
+      }
+    }
+  }
+  
+  &__resourceVideoText{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    &--video{
+      width: 343px;
+      height: 225px;
+      @include laptop{
+       width:920px;
+       height:517.68px;
+      }
+    }
+    &--description{
+      margin-top:1.895rem;
+      font-size: $base;
+      line-height: 21px;
+      width: 100%;
+      padding: 0 1rem;
+      text-align: justify;
+      @include laptop{
+        width: 56%;
+        width:920px;
+        padding: 0;
+      }
+    }
+  }  
+}

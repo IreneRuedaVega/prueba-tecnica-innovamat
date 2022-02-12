@@ -4,7 +4,6 @@ import type { ResourcesType, SectionResponse, SectionType } from "../types/commo
 import ContentItem from "./ContentItem";
 //styles
 import "../stylesheets/page/contentSection.scss";
-//svg
 import { eyeFavourite } from "../svg/eyeFavourite";
 
 type Props={
