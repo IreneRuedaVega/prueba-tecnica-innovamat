@@ -1,0 +1,68 @@
+@import "../core/variables.scss";
+@import "../core/mixins.scss";
+
+.workshopsHead{
+  @include laptop{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:2.625rem;
+  }
+  @include full-desktop{
+    max-width: 83.75%;
+  }
+  &__title{
+    @include laptop{
+      font-size: $huge;
+      color: $color-dark;
+      font-weight: bold;
+    }
+  }
+  &__showFavourites{
+    @include laptop{
+      font-size: $small;
+      color: $color-secondary;
+      line-height: 16px;
+      font-weight: normal;
+    }
+  }
+}
+
+.workshopsContainer{
+  &__sectionName{
+    display:none;
+    @include laptop{
+      display:block;
+      margin-top:1.375rem;
+      color: $color-dark;
+      font-weight: bold;
+      font-size: $big;
+      padding-bottom: .344rem;
+      border-bottom: 1px solid $color-light;
+    }
+    @include full-desktop{
+      width: 83.5%;
+    }
+  }
+  &__resources{ 
+    @include laptop{
+      display:flex;
+      flex-wrap: wrap;
+    }
+    @include desktop{
+      width: 110%;
+      max-width: 110%;
+    }    
+    @include full-desktop{
+      width: 86%;
+      max-width: 86%;
+    }
+    &--list{
+      @include laptop{
+        margin-right: 0.75rem;
+        margin-top: 0.75rem;
+      }
+    }
+  }
+}
+

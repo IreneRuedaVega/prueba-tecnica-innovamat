@@ -4,7 +4,7 @@
   }
 }
 
-@mixin small-desktop {
+@mixin laptop {
   @media all and (min-width: $laptop){
     @content;
   }
@@ -16,14 +16,14 @@
   }
 }
 
-@mixin large-desktop {
-  @media all and (min-width: $large-desktop){
+@mixin full-desktop {
+  @media all and (min-width: $full-desktop){
     @content;
   }
 }
 
-@mixin full-desktop {
-  @media all and (min-width: $full-desktop){
+@mixin ultrawide {
+  @media all and (min-width: $ultrawide){
     @content;
   }
 }

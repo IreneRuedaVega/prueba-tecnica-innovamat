@@ -3,4 +3,5 @@ export type {
   ResourcesType,
   SectionResponse,
   ResourceResponseType,
+  ImageType,
 } from "./common";

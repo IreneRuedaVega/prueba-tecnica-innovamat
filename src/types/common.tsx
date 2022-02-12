@@ -13,10 +13,15 @@ export type SectionType ={
   resources: Array<ResourcesType>
  }
  
- export type ResourcesType ={
-   id: string,
-   title: string,
-   tag: string,
-   description: string,
-   image: string,
- }
+export type ResourcesType ={
+  id: string,
+  title: string,
+  tag: string,
+  description: string,
+  image: string,
+}
+
+export type ImageType={
+  src: string,
+  alt: string,
+}

@@ -7,13 +7,19 @@
   padding-left: 1rem;
   margin: auto;
 
+  @include laptop{
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 4rem;
+  }
+
   @include desktop{
     padding-left: 11.563rem;
     padding-right: 11.375rem;
   }
 
   @include full-desktop{
-    max-width: 1880px;
+    max-width: 1660px;
   }
 }
 
