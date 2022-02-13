@@ -1,7 +1,7 @@
 import type { SectionResponse } from "../types/common";
 
 
-const getDataFromApiCorners = () => {
+const getDataFromApiCorners = (): Promise<SectionResponse> => {
   return fetch(
     "https://api.mocklets.com/mock68016/rincones"
   )

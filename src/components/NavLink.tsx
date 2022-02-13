@@ -9,7 +9,7 @@ type Props = {
 }) => string) | undefined
 }
 
-const NavLink = ({ to, children, ...props }: Props) =>{
+const NavLink = ({ to, children, ...props }: Props): JSX.Element =>{
   return (
     <NavLinkRouter
       {...props} 

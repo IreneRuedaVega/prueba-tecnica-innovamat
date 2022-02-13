@@ -1,7 +1,7 @@
 import type { ResourceResponseType } from "../types/common";
 
 
-const getDataResources = (id: string) => {
+const getDataResources = (id: string): Promise<ResourceResponseType> => {
   return fetch(
     `https://api.mocklets.com/mock68016/resource/${id}`
   )

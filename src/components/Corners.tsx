@@ -10,7 +10,7 @@ import ContentSection from "./ContentSection";
 import Header from "./Header";
 
 
-function  Workshops(): JSX.Element {
+function  Corners(): JSX.Element {
   const [cornersData, setCornersData] = useState<SectionResponse>();
   useEffect(() => {
     getDataFromApiCorners()
@@ -31,4 +31,4 @@ function  Workshops(): JSX.Element {
   );
 }
 
-export default Workshops;
+export default Corners;

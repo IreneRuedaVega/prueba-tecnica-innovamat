@@ -14,7 +14,7 @@ import "../stylesheets/page/detailResource.scss";
 import { backButton } from "../svg/backButton";
 
 
-function DetailResource(){
+function DetailResource(): JSX.Element{
   const { id } = useParams(); 
   const [resourceData, setResourceData] = useState<ResourceResponseType>();
   useEffect(() => {

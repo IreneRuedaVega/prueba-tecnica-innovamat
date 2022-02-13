@@ -7,7 +7,7 @@ import Corners from "./Corners";
 import Workshops from "./Workshops";
 
 
-function MainPage() {
+function MainPage(): JSX.Element {
   return (
     <div>
       <Routes>

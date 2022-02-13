@@ -1,7 +1,7 @@
 import type { SectionResponse } from "../types/common";
 
 
-const getDataFromApiWorkshop = () => {
+const getDataFromApiWorkshop = (): Promise<SectionResponse> => {
   return fetch(
     "https://api.mocklets.com/mock68016/talleres"
   )
