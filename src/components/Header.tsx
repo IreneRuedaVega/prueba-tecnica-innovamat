@@ -1,29 +1,8 @@
-//dependencies
-import { NavLink as NavLinkRouter } from "react-router-dom";
+//components
+import NavLink from "./NavLink";
 //style
 import "../stylesheets/layout/header.scss";
 
-type NavLinkProps= {
-  to: string,
-  children: string,
-  className: string | ((props: {
-    isActive: boolean;
-}) => string) | undefined
-}
-
-
-const NavLink = ({ to, children, ...props }: NavLinkProps) =>{
-  return (
-    <NavLinkRouter
-      {...props} 
-      to={to}
-      className={({ isActive }) =>{
-      return isActive ? "menuDesktop__item--activeLink" : "menuDesktop__item--noActiveLink"
-    }}>
-      {children}
-    </NavLinkRouter>
-  )
-}
 
 function Header(): JSX.Element{
   return (
@@ -44,9 +23,8 @@ function Header(): JSX.Element{
           </li>
         </ul>
       </nav>
-      </header>
+    </header>
   );
-
 }
   
 
