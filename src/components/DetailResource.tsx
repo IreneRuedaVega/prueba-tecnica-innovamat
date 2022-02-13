@@ -1,6 +1,7 @@
 //dependencies
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 //data
 import getDataResources from "../data/getDataResources";
 //types
@@ -23,12 +24,15 @@ function DetailResource(){
   }, [id]);
 
   if(resourceData === undefined) return <p>Cargando...</p>
-  
+ 
   const { title, type, videoId, description} = resourceData;
+
   return (
     <div className="resourceContainer">
       <div className="resourceContainer__resourceTitle">
-        <span className="resourceContainer__resourceTitle--button">{backButton}</span>
+        <Link to={"/"}>
+          <span className="resourceContainer__resourceTitle--button">{backButton}</span>
+        </Link>
         <div className="resourceContainer__resourceTitle--title">{title}</div>
       </div>
       <div className="resourceContainer__resourceVideoText">
