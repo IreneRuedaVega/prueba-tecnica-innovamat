@@ -19,7 +19,9 @@ function Header(): JSX.Element{
             </NavLink> 
           </li>
           <li className="menuDesktop__item">
-            <NavLink to="/rincones" className="menuDesktop__item--link">Rincones</NavLink>
+            <NavLink to="/rincones" className="menuDesktop__item--link">
+              Rincones
+            </NavLink>
           </li>
         </ul>
       </nav>

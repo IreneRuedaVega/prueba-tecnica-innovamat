@@ -2,6 +2,7 @@
 import type { ResourcesType, SectionResponse, SectionType } from "../types/common";
 //components
 import ContentItem from "./ContentItem";
+import IconButton from "./IconButton";
 //styles
 import "../stylesheets/page/contentSection.scss";
 import { eyeFavourite } from "../svg/eyeFavourite";
@@ -16,17 +17,21 @@ const ContentSection: React.FC<Props> = ({
   tag,
 }:Props):React.ReactElement =>{
 
+  //literals
   const titleWorkshops = "Talleres";
   const titleCorners = "Rincones";
+  const showFavourites = "Ver favoritos"
 
   return(
     <div>
       <div className="contentSectionHead">
         <h1 className="contentSectionHead__title">{tag === "workshops" ? titleWorkshops : titleCorners}</h1>
-        <div className="contentSectionHead__showFavourites">
-          <span className="contentSectionHead__showFavourites--eyeSymbol">{eyeFavourite}</span>
-          <span>Ver favoritos</span>
-        </div>
+        <IconButton 
+          icon={eyeFavourite} 
+          label={showFavourites} 
+          className="contentSectionHead__showFavourites" 
+          classNameLabel="contentSectionHead__showFavourites--eyeSymbol"
+        />
       </div>
       {dataContent.map((workshop: SectionType, index )=>{
         return (

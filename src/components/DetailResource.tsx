@@ -8,8 +8,9 @@ import getDataResources from "../data/getDataResources";
 import type { ResourceResponseType } from "../types/common";
 //components
 import Video from "./Video";
+import IconButton from "./IconButton";
 //style
-import "../stylesheets/page/detailResources.scss";
+import "../stylesheets/page/detailResource.scss";
 import { backButton } from "../svg/backButton";
 
 
@@ -31,7 +32,7 @@ function DetailResource(){
     <div className="resourceContainer">
       <div className="resourceContainer__resourceTitle">
         <Link to={"/"}>
-          <span className="resourceContainer__resourceTitle--button">{backButton}</span>
+          <IconButton className="resourceContainer__resourceTitle--button" icon={backButton} />
         </Link>
         <div className="resourceContainer__resourceTitle--title">{title}</div>
       </div>

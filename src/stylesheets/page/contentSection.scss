@@ -27,10 +27,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
+      outline: none;
+      background-color: transparent;
+      border: 0px solid transparent;
+
     }
     &--eyeSymbol{
       @include laptop{
-        margin-right: .25rem;
+        margin-left: .25rem;
       }
     }
   }
