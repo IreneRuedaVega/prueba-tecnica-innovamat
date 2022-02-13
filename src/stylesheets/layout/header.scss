@@ -6,10 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 8vh;
+  height: 4.375rem;
   border-bottom: 1px solid $color-line;
   &__nav{
-    width: 250px;
+    width: 300px;
     &--menu,
     .menuDesktop{
       display: flex;
@@ -19,23 +19,20 @@
         &--activeLink{
           text-decoration: none;
           font-style: normal;
-          font-weight: 21px;
+          font-weight: 400;
           font-size: $base;
           color: $color-secondary;
           border-bottom: 4px solid $color-secondary;
-          padding-bottom: 1.75rem;
-          padding-left: 2rem;
-          padding-right: 2rem;
+          padding-bottom: 1.25rem;
+          padding-left: 3rem;
+          padding-right: 3rem;
         }
         &--noActiveLink{
           text-decoration: none;
           font-style: normal;
-          font-weight: 21px;
+          font-weight: 400;
           font-size: $base;
           color: $color-menuGray;
-          padding-bottom: 1.75rem;
-          padding-left: 2rem;
-          padding-right: 2rem;
         }
       }
     }
