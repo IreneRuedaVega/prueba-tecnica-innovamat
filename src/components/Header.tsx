@@ -1,19 +1,49 @@
 //dependencies
-import { Link } from "react-router-dom";
+import { NavLink as NavLinkRouter } from "react-router-dom";
 //style
 import "../stylesheets/layout/header.scss";
 
+type NavLinkProps= {
+  to: string,
+  children: string,
+  className: string | ((props: {
+    isActive: boolean;
+}) => string) | undefined
+}
 
-function Header(){
-  // if(resourceData === undefined) return <p>Cargando...</p>
+
+const NavLink = ({ to, children, ...props }: NavLinkProps) =>{
   return (
-    <header>
-        <nav>
-          <ul>
-            <li><Link to="/">Talleres</Link></li>
-            <li><Link to="/rincones">Rincones</Link></li>
-          </ul>
-        </nav>
+    <NavLinkRouter
+      {...props} 
+      to={to}
+      className={({ isActive }) =>{
+      return isActive ? "menuDesktop__item--activeLink" : "menuDesktop__item--noActiveLink"
+    }}>
+      {children}
+    </NavLinkRouter>
+  )
+}
+
+function Header(): JSX.Element{
+  return (
+    <header className="header">
+      <nav className="header__nav">
+        <ul className="header__nav--menu menuDesktop">
+          <li className="menuDesktop__item">
+            <NavLink 
+              to="/" 
+              className={({ isActive }) =>{
+              return isActive ? "menuDesktop__item--activeLink" : "menuDesktop__item--noActiveLink"
+            }}>
+              Talleres
+            </NavLink> 
+          </li>
+          <li className="menuDesktop__item">
+            <NavLink to="/rincones" className="menuDesktop__item--link">Rincones</NavLink>
+          </li>
+        </ul>
+      </nav>
       </header>
   );
 

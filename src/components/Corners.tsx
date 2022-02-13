@@ -7,10 +7,10 @@ import type { SectionResponse } from "../types/common";
 //components
 import Container from "./Container";
 import ContentSection from "./ContentSection";
+import Header from "./Header";
 
 
-
-function  Workshops() {
+function  Workshops(): JSX.Element {
   const [cornersData, setCornersData] = useState<SectionResponse>();
   useEffect(() => {
     getDataFromApiCorners()
@@ -21,11 +21,13 @@ function  Workshops() {
 
   if(cornersData === undefined) return <p>Cargando...</p>
 
-
   return (
-    <Container>
-      <ContentSection dataContent={cornersData} tag="corners" />
-    </Container>
+    <div>
+      <Header />
+      <Container>
+        <ContentSection dataContent={cornersData} tag="corners" />
+      </Container>
+    </div>
   );
 }
 

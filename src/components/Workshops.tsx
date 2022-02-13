@@ -7,8 +7,9 @@ import type { SectionResponse } from "../types/common";
 //components
 import Container from "./Container";
 import ContentSection from "./ContentSection";
+import Header from "./Header";
 
-function  Workshops() {
+function  Workshops(): JSX.Element {
   const [workshopData, setWorkshopData] = useState<SectionResponse>();
   useEffect(() => {
     getDataFromApiWorkshops()
@@ -21,9 +22,12 @@ function  Workshops() {
 
 
   return (
-    <Container>
-      <ContentSection dataContent={workshopData} tag="workshops" />
-    </Container>
+    <div>
+      <Header />
+      <Container>
+        <ContentSection dataContent={workshopData} tag="workshops" />
+      </Container>
+    </div>
   );
 }
 

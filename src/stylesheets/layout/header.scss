@@ -1,0 +1,44 @@
+@import "../core/variables.scss";
+@import "../core/mixins.scss";
+
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  border-bottom: 1px solid $color-line;
+  &__nav{
+    width: 250px;
+    &--menu,
+    .menuDesktop{
+      display: flex;
+      justify-content: space-between;
+      list-style:none;
+      &__item{
+        &--activeLink{
+          text-decoration: none;
+          font-style: normal;
+          font-weight: 21px;
+          font-size: $base;
+          color: $color-secondary;
+          border-bottom: 4px solid $color-secondary;
+          padding-bottom: 1.75rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+        &--noActiveLink{
+          text-decoration: none;
+          font-style: normal;
+          font-weight: 21px;
+          font-size: $base;
+          color: $color-menuGray;
+          padding-bottom: 1.75rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
