@@ -10,16 +10,15 @@ import ContentSection from "./ContentSection";
 import Header from "./Header";
 
 function  Workshops(): JSX.Element {
-  const [workshopData, setWorkshopData] = useState<SectionResponse>();
+  const [workshopData, setWorkshopData] = useState<SectionResponse>([]);
   useEffect(() => {
     getDataFromApiWorkshops()
-      .then((data) => { 
+      .then((data: SectionResponse) => {
         setWorkshopData(data); 
       })
   }, []);
 
   if(workshopData === undefined) return <p>Cargando...</p>
-
 
   return (
     <div>

@@ -1,6 +1,6 @@
 type Props={
-  onClick?: () => void
-  icon: React.ReactElement
+  onClick?: any,
+  icon: React.ReactElement,
   label?: string,
   className?: string,
   classNameLabel?: string,

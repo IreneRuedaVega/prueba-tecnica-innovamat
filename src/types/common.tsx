@@ -10,7 +10,7 @@ export type ResourceResponseType ={
 
 export type SectionType ={
   sectionName: string,
-  resources: Array<ResourcesType>
+  resources: Array<ResourcesType>,
  }
  
 export type ResourcesType ={

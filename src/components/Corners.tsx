@@ -14,7 +14,7 @@ function  Corners(): JSX.Element {
   const [cornersData, setCornersData] = useState<SectionResponse>();
   useEffect(() => {
     getDataFromApiCorners()
-      .then((data) => { 
+      .then((data:SectionResponse) => { 
         setCornersData(data); 
       })
   }, []);

@@ -19,7 +19,7 @@ function DetailResource(): JSX.Element{
   const [resourceData, setResourceData] = useState<ResourceResponseType>();
   useEffect(() => {
     getDataResources(`${id}`)
-      .then((data) => { 
+      .then((data: ResourceResponseType) => { 
         setResourceData(data); 
       })
   }, [id]);
@@ -38,7 +38,7 @@ function DetailResource(): JSX.Element{
       </div>
       <div className="resourceContainer__resourceVideoText">
         <Video type={type} videoId={videoId} title={title} className="resourceContainer__resourceVideoText--video" />
-        <p className="resourceContainer__resourceVideoText--description">{description}</p>
+        <div className="resourceContainer__resourceVideoText--description" dangerouslySetInnerHTML={{__html:description}} />
       </div>
     </div>
   );
