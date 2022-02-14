@@ -77,6 +77,17 @@
       margin-left: .25rem;
     }
   }
+  &__heartLike{
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: 0px solid transparent;
+    padding: 0.813rem 0 0.313rem;
+  }
+
+  &__noFavourite{
+    opacity: 0;
+  }
 }
 
 .link{

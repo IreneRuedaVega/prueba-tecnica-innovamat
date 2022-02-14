@@ -1,4 +1,5 @@
 //dependencies
+import { useState } from "react";
 import { Link } from "react-router-dom";
 //components
 import SimpleImage from "./SimpleImage";
@@ -31,15 +32,14 @@ const ContentItem: React.FC<Props> = ({
   isFavourite,
 }:Props):React.ReactElement =>{
   const ctaLabel = "Favorito";
-  // const [showFavBtn, setShowFavBtn] = useState<boolean>(false);
+  const [showFavBtn, setShowFavBtn] = useState<boolean>(false);
  
 
   return(
     <div 
-      // onMouseEnter={() => setShowFavBtn(true)}
-      // onMouseLeave={() => setShowFavBtn(false)}
-      // className={`${showFavBtn ? "contentContainerHover" : "contentContainer"}`}
-      className="contentContainer"
+      onMouseEnter={() => setShowFavBtn(true)}
+      onMouseLeave={() => setShowFavBtn(false)}
+      className={`${showFavBtn || isFavourite ? "contentContainerHover" : "contentContainer"}`}
     >
       <Link to={`/recursos/${id}`} className="link">
         <div className="contentContainer__content"> 
@@ -56,12 +56,11 @@ const ContentItem: React.FC<Props> = ({
           </div>
         </div>
       </Link>
-      {/* {showFavBtn && */}
       {!isFavourite ? (
         <IconButton 
           icon={heart} 
           label={ctaLabel} 
-          className="contentContainer__favourite" 
+          className={!isFavourite && showFavBtn ? "contentContainer__favourite" : "contentContainer__noFavourite" }
           classNameLabel="contentContainer__favourite--ctaLabel"
           onClick={handleAddFavourite}    
         />
@@ -69,7 +68,7 @@ const ContentItem: React.FC<Props> = ({
         <IconButton 
           icon={heartLike} 
           label={ctaLabel} 
-          className="contentContainer__favourite" 
+          className="contentContainer__heartLike"
           classNameLabel="contentContainer__favourite--ctaLabel" 
           onClick={handleRemoveFavourite}  
         />
