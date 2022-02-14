@@ -7,6 +7,7 @@ import ContentItem from "./ContentItem";
 import IconButton from "./IconButton";
 //styles
 import "../stylesheets/page/contentSection.scss";
+//svg
 import { eyeFavourite } from "../svg/eyeFavourite";
 
 type Props={
@@ -82,6 +83,12 @@ const ContentSection: React.FC<Props> = ({
           <button type="button" className="contentSectionHead__showAll" onClick={() => showAll()}>{seeAll}</button>
         )}
       </div>
+      <div className="contentSectionHeadMobile">
+        <h1 className="contentSectionHeadMobile__title">{tag === "workshops" ? titleWorkshops : titleCorners}</h1>
+        <button type="button" onClick={() => console.log("sort")} className="contentSectionHeadMobile__sortLabelMobile">
+          {sortLabel}
+        </button>
+      </div>
       {!showFavouritesResources ? (
         <div>
           {dataContent.map((workshop: SectionType, index )=>{
@@ -133,7 +140,7 @@ const ContentSection: React.FC<Props> = ({
                   />
                 </div>
               )
-            }                      
+            }                    
           })}
         </div>
       )}

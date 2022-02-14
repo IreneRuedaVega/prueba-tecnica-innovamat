@@ -1,11 +1,16 @@
 //components
 import NavLink from "./NavLink";
+import MenuMobile from "./MenuMobile";
 //style
 import "../stylesheets/layout/header.scss";
 
 
 function Header(): JSX.Element{
+
+  const titleMenuWorkshops = "Talleres";
+  const titleMenuCorners = "Rincones";
   return (
+    <>
     <header className="header">
       <nav className="header__nav">
         <ul className="header__nav--menu menuDesktop">
@@ -20,12 +25,17 @@ function Header(): JSX.Element{
           </li>
           <li className="menuDesktop__item">
             <NavLink to="/rincones" className="menuDesktop__item--link">
-              Rincones
+              Rincones    
             </NavLink>
           </li>
         </ul>
       </nav>
     </header>
+    <MenuMobile 
+      titleMenuWorkshops={titleMenuWorkshops} 
+      titleMenuCorners={titleMenuCorners}
+    />
+    </>
   );
 }
   
