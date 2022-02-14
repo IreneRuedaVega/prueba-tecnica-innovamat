@@ -15,6 +15,7 @@
     &--menu,
     .menuMobile{
       display: flex;
+      justify-content: space-between;
       list-style: none;
       &__item{
         &--activeLink{
@@ -22,7 +23,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin-right: 1rem;
+          margin: 0 1rem;
           text-decoration: none;
           color: $color-secondary;
         }
@@ -31,7 +32,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin-right: 1rem;
+          margin: 0 1rem;
           text-decoration: none;
           color: $color-darkGray;
         }

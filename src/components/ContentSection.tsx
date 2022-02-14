@@ -71,6 +71,17 @@ const ContentSection: React.FC<Props> = ({
 
   return(
     <div>
+      <div className="contentSectionFavouriteMobile">
+        {!showFavouritesResources ? <IconButton 
+          icon={eyeFavourite} 
+          label={howFavouritesLabel} 
+          className="contentSectionFavouriteMobile__showFavourites" 
+          classNameLabel="contentSectionFavouriteMobile__showFavourites--eyeSymbol"
+          onClick={() => showFavourites()}
+        /> : (
+          <button type="button" className="contentSectionFavouriteMobile__showAll" onClick={() => showAll()}>{seeAll}</button>
+        )}
+      </div>
       <div className="contentSectionHead">
         <h1 className="contentSectionHead__title">{tag === "workshops" ? titleWorkshops : titleCorners}</h1>
         {!showFavouritesResources ? <IconButton 

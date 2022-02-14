@@ -1,6 +1,36 @@
 @import "../core/variables.scss";
 @import "../core/mixins.scss";
 
+.contentSectionFavouriteMobile{
+  height: 8vh;
+  background-color: rgba(237, 237, 237, 0.5);
+  color: $color-secondary;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+  &__showFavourites,
+  &__showAll{
+    font-size: $small;
+    color: $color-secondary;
+    line-height: 16px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: 0px solid transparent;
+    &--eyeSymbol{
+      margin-left: .25rem;
+    }
+  }
+  @include laptop{
+    display: none;
+  }
+}
+
 .contentSectionHead{
   display: none;
   @include laptop{
