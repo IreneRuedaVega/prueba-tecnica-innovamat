@@ -1,5 +1,4 @@
 //dependencies
-import { useState } from "react";
 import { Link } from "react-router-dom";
 //components
 import SimpleImage from "./SimpleImage";
@@ -16,9 +15,9 @@ type Props={
   tag?: string,
   description: string,
   image: string,
-  handleAddFavourite: () => void,
-  // handleRemoveFavourite: () => void,
-  // isFavourite: boolean,
+  handleAddFavourite?: () => void,
+  handleRemoveFavourite?: () => void,
+  isFavourite?: boolean,
 }
 
 const ContentItem: React.FC<Props> = ({
@@ -28,18 +27,19 @@ const ContentItem: React.FC<Props> = ({
   description,
   image,
   handleAddFavourite,
-  // handleRemoveFavourite,
-  // isFavourite
+  handleRemoveFavourite,
+  isFavourite,
 }:Props):React.ReactElement =>{
   const ctaLabel = "Favorito";
-  const [showFavBtn, setShowFavBtn] = useState<boolean>(false);
+  // const [showFavBtn, setShowFavBtn] = useState<boolean>(false);
  
 
   return(
     <div 
-      onMouseEnter={() => setShowFavBtn(true)}
-      onMouseLeave={() => setShowFavBtn(false)}
-      className={`${showFavBtn ? "contentContainerHover" : "contentContainer"}`}
+      // onMouseEnter={() => setShowFavBtn(true)}
+      // onMouseLeave={() => setShowFavBtn(false)}
+      // className={`${showFavBtn ? "contentContainerHover" : "contentContainer"}`}
+      className="contentContainer"
     >
       <Link to={`/recursos/${id}`} className="link">
         <div className="contentContainer__content"> 
@@ -56,7 +56,8 @@ const ContentItem: React.FC<Props> = ({
           </div>
         </div>
       </Link>
-      {showFavBtn &&
+      {/* {showFavBtn && */}
+      {!isFavourite ? (
         <IconButton 
           icon={heart} 
           label={ctaLabel} 
@@ -64,19 +65,15 @@ const ContentItem: React.FC<Props> = ({
           classNameLabel="contentContainer__favourite--ctaLabel"
           onClick={handleAddFavourite}    
         />
-      } 
-     
-      {/* {isFavourite ? ( */}
-        {/* <IconButton 
+       ):(
+        <IconButton 
           icon={heartLike} 
           label={ctaLabel} 
           className="contentContainer__favourite" 
           classNameLabel="contentContainer__favourite--ctaLabel" 
           onClick={handleRemoveFavourite}  
-         />  */}
-      {/* ) : ( */}
-   
-      {/* )} */}
+        />
+      )} 
     </div>
   )
 } 

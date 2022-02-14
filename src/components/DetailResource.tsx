@@ -9,6 +9,7 @@ import type { ResourceResponseType } from "../types/common";
 //components
 import Video from "./Video";
 import IconButton from "./IconButton";
+import Loading from "./Loading";
 //style
 import "../stylesheets/page/detailResource.scss";
 import { backButton } from "../svg/backButton";
@@ -24,7 +25,7 @@ function DetailResource(): JSX.Element{
       })
   }, [id]);
 
-  if(resourceData === undefined) return <p>Cargando...</p>
+  if(resourceData === undefined) return <Loading />
  
   const { title, type, videoId, description} = resourceData;
 

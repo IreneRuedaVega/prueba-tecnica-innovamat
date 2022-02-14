@@ -18,7 +18,8 @@
       font-weight: bold;
     }
   }
-  &__showFavourites{
+  &__showFavourites,
+  &__showAll{
     @include laptop{
       font-size: $small;
       color: $color-secondary;
@@ -96,5 +97,14 @@
       }
     }
   }
+}
+
+.favouritesResources{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid $color-light;
+  // flex-wrap:wrap;
 }
 

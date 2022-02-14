@@ -8,6 +8,9 @@ import type { SectionResponse } from "../types/common";
 import Container from "./Container";
 import ContentSection from "./ContentSection";
 import Header from "./Header";
+import Loading from "./Loading";
+//styles
+import "../stylesheets/components/loading.scss";
 
 
 function  Corners(): JSX.Element {
@@ -19,7 +22,7 @@ function  Corners(): JSX.Element {
       })
   }, []);
 
-  if(cornersData === undefined) return <p>Cargando...</p>
+  if(cornersData === undefined) return <Loading />
 
   return (
     <div>
