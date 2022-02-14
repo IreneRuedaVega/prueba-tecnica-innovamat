@@ -60,8 +60,6 @@ const ContentSection: React.FC<Props> = ({
     saveToLocalStorage(newFavouriteList);
 	};
   
-  console.log(favourites);
-
   const showFavourites = ():void =>{
     setShowFavouritesResources(true);
   }
@@ -116,15 +114,26 @@ const ContentSection: React.FC<Props> = ({
         </div>
       ) : (
         <div className="favouritesResources">
-          {favourites.map((item: ResourcesType, index) =>{                            
-            return (
-              <div key={index}>
-                <ContentItem 
-                  {...item}
-                  isFavourite={favourites.some(fav => fav.id === item.id && fav.title === item.title && fav.image === item.image && fav.description === item.description && item.tag === fav.tag)}
-                />
-              </div>
-            )
+          {favourites.map((item: ResourcesType, index) =>{     
+            if(tag === "workshops" && item.tag === "Talleres"){
+              return (
+                <div key={index} className="favouritesResources__content">
+                  <ContentItem 
+                    {...item}
+                    isFavourite={favourites.some(fav => fav.id === item.id && fav.title === item.title && fav.image === item.image && fav.description === item.description && item.tag === fav.tag)}
+                  />
+                </div>
+              )
+            }else if(tag === "corners" && item.tag === "Rincones"){
+              return (
+                <div key={index} className="favouritesResources__content">
+                  <ContentItem 
+                    {...item}
+                    isFavourite={favourites.some(fav => fav.id === item.id && fav.title === item.title && fav.image === item.image && fav.description === item.description && item.tag === fav.tag)}
+                  />
+                </div>
+              )
+            }                      
           })}
         </div>
       )}
