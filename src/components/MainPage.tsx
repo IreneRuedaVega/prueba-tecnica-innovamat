@@ -1,5 +1,7 @@
-import "../stylesheets/layout/index.scss";
+//dependencies
 import { Route, Routes } from "react-router-dom";
+//styles
+import "../stylesheets/layout/index.scss";
 
 //components
 import DetailResource from "./DetailResource";
