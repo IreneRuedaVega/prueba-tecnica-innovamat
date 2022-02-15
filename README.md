@@ -96,11 +96,11 @@ src
 
 .
 
-- Esta web ha sido desarrollado con: HTML5, CSS3, SASS y REACT.
+- Esta web ha sido desarrollada con: HTML5, CSS3, SASS y REACT.
 - Se han usado mediaqueries para hacer la web responsive (diseño adaptable a los distintos dispositos).
 - Para los estilos se ha utilizado el preprocesador SASS y CSS3.
 - Para el control de versiones del proyecto se ha utilizado Git.
-- Para la realización de los commits se ha utilizao la metodología de convencional commits (https://www.conventionalcommits.org/en/v1.0.0/)
+- Para la realización de los commits se ha utilizado la metodología de convencional commits (https://www.conventionalcommits.org/en/v1.0.0/)
 - Además se han utilizado la librería: react-router-dom. Para la navegación entre secciones y el enrutamiento de la página de inicio a la página de detalle del recurso.
 - Almacenamiento en local: he almacenado los listados de favoritos en localStorage. De esta forma, al recargar la página los recursos seleccionados por los alumnos como favoritos seguirán apareciendo como favoritos y estarán nuevamente en la lista de favoritos por categoría desplegada al darle al botón "Ver favoritos". He almacenado todo el objeto debido a que no se tenía la posibilidad de tener una id única, ya que algunos recursos compartían id.
 
