@@ -106,13 +106,13 @@ src
 
 A través de una metodología Kanban en papel se ha ido realizando el desarrollo de esta web. Los pasos seguidos han sido:
 
-1º: Identificar en el diseño los distintos componentes y asignarles un nombre y como gestionar el flujo de las distintas funcionalidades. Pensar estratégicamente como hacer que la página sea responsive, teniendo en cuenta el diseño mobile y desktop del diseño.
-2º: Hacer llamadas a la API para obtener los datos con los cuales hacer realidad las funcionalidades y pintar los elementos. Por ello, se ha creado la carpeta data, con las distintas llamadas.
-3º: Maquetación. Maquetación de la página de inicio, con sus dos secciones Talleres y Rincones. Después maquetación del detalle del recurso y finalmente la maquetación del header (menú desktop).
-4º: Enrutamiento a través de react-router-dom, del menú de la página de inicio y a su vez el enrutamiento a la página de detalle de recurso.
-5º: Desarrollo de la funcionalidad de favoritos. Al darle al botón de "Ver favoritos" podemos visualizar los favoritos en una lista. Esta funcionalidad podemos ver su desarrollo en ContentSection, ya que funciona para ambas secciones (Talleres y Rincones) de la misma manera. Almacenamiento en local: he almacenado los listados de favoritos en localStorage. De esta forma, al recargar la página los recursos seleccionados por los alumnos como favoritos seguirán apareciendo como favoritos y estarán nuevamente en la lista de favoritos por categoría desplegada al darle al botón "Ver favoritos". He almacenado todo el objeto debido a que no se tenía la posibilidad de tener una id única, ya que algunos recursos compartían id.
-6º: Realización de la versión mobile de la página de inicio y la página del detalle del recurso.
-7º: Planteamiento de acciones futuras para seguir mejorando la página y sus funcionalidades.
+- 1º: Identificar en el diseño los distintos componentes y asignarles un nombre y como gestionar el flujo de las distintas funcionalidades. Pensar estratégicamente como hacer que la página sea responsive, teniendo en cuenta el diseño mobile y desktop del diseño.
+- 2º: Hacer llamadas a la API para obtener los datos con los cuales hacer realidad las funcionalidades y pintar los elementos. Por ello, se ha creado la carpeta data, con las distintas llamadas.
+- 3º: Maquetación. Maquetación de la página de inicio, con sus dos secciones Talleres y Rincones. Después maquetación del detalle del recurso y finalmente la maquetación del header (menú desktop).
+- 4º: Enrutamiento a través de react-router-dom, del menú de la página de inicio y a su vez el enrutamiento a la página de detalle de recurso.
+- 5º: Desarrollo de la funcionalidad de favoritos. Al darle al botón de "Ver favoritos" podemos visualizar los favoritos en una lista. Esta funcionalidad podemos ver su desarrollo en ContentSection, ya que funciona para ambas secciones (Talleres y Rincones) de la misma manera. Almacenamiento en local: he almacenado los listados de favoritos en localStorage. De esta forma, al recargar la página los recursos seleccionados por los alumnos como favoritos seguirán apareciendo como favoritos y estarán nuevamente en la lista de favoritos por categoría desplegada al darle al botón "Ver favoritos". He almacenado todo el objeto debido a que no se tenía la posibilidad de tener una id única, ya que algunos recursos compartían id.
+- 6º: Realización de la versión mobile de la página de inicio y la página del detalle del recurso.
+- 7º: Planteamiento de acciones futuras para seguir mejorando la página y sus funcionalidades.
 .
 
 </details>
