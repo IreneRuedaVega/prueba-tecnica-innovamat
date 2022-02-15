@@ -65,6 +65,9 @@ src
  |  └─ getDataResources.tsx _____ Gestión de llamada a la API de Detalle de recurso
  |
  ├─ stylesheets
+ |  ├─ components
+ |  |  ├─ contentItem.scss 
+ |  |  └─ loading.scss 
  |  ├─ core
  |  |  ├─ reset.scss ______ Reset de ciertos parámetros para reducir la inconsistencia entre navegadores
  |  |  ├─ mixins.scss ______ Mixins personalizadas
@@ -74,7 +77,7 @@ src
  |  |  ├─header.scss
  |  |  ├─index.scss
  |  |  └─ menuMobile.scss
- |  └─ layout
+ |  └─ page
  |     ├─ contentSection.scss
  |     └─ detailResource.scss
  |  
