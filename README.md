@@ -21,7 +21,7 @@ El objetivo de la prueba técnica era el desarrollo de una aplicación web dónd
 
 ## **Scripts para arrancar el proyecto**
 
-### Clonar el repositorio
+Clonar el repositorio
 
 ### `npm install`
 
