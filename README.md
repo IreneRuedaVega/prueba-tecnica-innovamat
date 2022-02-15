@@ -6,7 +6,7 @@
 
 El objetivo de la prueba técnica era el desarrollo de una aplicación web dónde los alumnos puedan navegar para encontrar los recursos según su categoría. Por ello, disponemos de un menú donde los alumnos podrán navegar entre secciones. Además, existían dos objetivos más, que el alumno pudiera acceder desde la página de inicio a la página de detalle de los recursos y que los alumnos pudieran marcar como favorito los recursos que deseen, quedando marcados los recursos favoritos mientras se navega entre categorías. Por último, se debían de enseñar toda la lista de recursos favoritos que han sido seleccionados por el alumno en la sección activa donde se encuentre. 
 
-## ** Stack tecnológico **
+## Stack tecnológico
 
 | React | TypeScript | JSX | API REST |
 | -- | -- | -- | -- |
@@ -97,6 +97,7 @@ src
 - Se han usado mediaqueries para hacer la web responsive (diseño adaptable a los distintos dispositos).
 - Para los estilos se ha utilizado el preprocesador SASS y CSS3.
 - Para el control de versiones del proyecto se ha utilizado Git.
+- Para la realización de los commits se ha utilizao la metodología de convencional commits (https://www.conventionalcommits.org/en/v1.0.0/)
 - Además se han utilizado la librería: react-router-dom. Para la navegación entre secciones y el enrutamiento de la página de inicio a la página de detalle del recurso.
 - Almacenamiento en local: he almacenado los listados de favoritos en localStorage. De esta forma, al recargar la página los recursos seleccionados por los alumnos como favoritos seguirán apareciendo como favoritos y estarán nuevamente en la lista de favoritos por categoría desplegada al darle al botón "Ver favoritos". He almacenado todo el objeto debido a que no se tenía la posibilidad de tener una id única, ya que algunos recursos compartían id.
 
