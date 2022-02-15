@@ -1,46 +1,114 @@
-# Getting Started with Create React App
+# Innovamat Junior FrontEnd Developer 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prueba técnica para el puesto de **Junior Front-end Developer** en **[Innovamat](https://innovamat.com/)**
 
-## Available Scripts
+## **Objetivo**
 
-In the project directory, you can run:
+El objetivo de la prueba técnica era el desarrollo de una aplicación web dónde los alumnos puedan navegar para encontrar los recursos según su categoría. Por ello, disponemos de un menú donde los alumnos podrán navegar entre secciones. Además, existían dos objetivos más, que el alumno pudiera acceder desde la página de inicio a la página de detalle de los recursos y que los alumnos pudieran marcar como favorito los recursos que deseen, quedando marcados los recursos favoritos mientras se navega entre categorías. Por último, se debían de enseñar toda la lista de recursos favoritos que han sido seleccionados por el alumno en la sección activa donde se encuentre. 
+
+## ** Stack tecnológico
+
+| React | TypeScript | JSX | API REST |
+| -- | -- | -- | -- |
+
+| HTML5 | CSS3 | Sass | 
+| -- | -- | -- | 
+
+| Git + GitHub | npm |
+| -- | -- | -- | -- |
+
+------------
+
+## **Scripts para arrancar el proyecto**
+
+### Clonar el repositorio
+
+### `npm install`
+
+Antes de inicializar la aplicación: instala las dependencias mediante este comando.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Arranca la aplicación en modo desarrollo.
+Abre `http://localhost:3000` para visualizarla en el navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+La página se actualizará automáticamente con cada cambio que ocurra en el código.
+Igualmente, se mostrarán los errores y los warning del lint en la consola.
 
-### `npm test`
+### Estructura del proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<details>
+<summary>Desplegar para ver la estructura del proyecto</summary>
 
-### `npm run build`
+```
+src
+ |
+ ├─ components
+ |  ├─ MainPage.tsx _____________ Componente principal que gestiona las rutas de la web
+ |  ├─ Header.tsx _____________ Menú Desktop
+ |  ├─ MenuMobile.tsx _____________ Menú Mobile
+ |  ├─ Workshops.tsx _____________ Componente que gestiona los datos de Talleres
+ |  ├─ Corners.tsx _____________ Componente que gestiona los datos de Rincones
+ |  ├─ ContentSection.tsx ___ Componente que gestiona las secciones y los recursos favoritos.
+ |  ├─ ContentItem.tsx _____________ Componente que pinta las tarjetas de los recursos.
+ |  ├─ DetailResource.tsx _______ Componente que gestiona el detalle de los recursos.  
+ |  ├─ NavLink.tsx 
+ |  ├─ SimpleImage.tsx  
+ |  ├─ Video.tsx 
+ |  ├─ IconButton.tsx 
+ |  ├─ Container.tsx 
+ |  └─ Loading.tsx 
+ |
+ ├─ data
+ |  ├─ getDataFromApiCorners.tsx _____ Gestión de llamada a la API de Rincones
+ |  ├─ getDataFromApiWorkshops.tsx _____ Gestión de llamada a la API de Talleres
+ |  └─ getDataResources.tsx _____ Gestión de llamada a la API de Detalle de recurso
+ |
+ ├─ stylesheets
+ |  ├─ core
+ |  |  ├─ reset.scss ______ Reset de ciertos parámetros para reducir la inconsistencia entre navegadores
+ |  |  ├─ mixins.scss ______ Mixins personalizadas
+ |  |  └─ variables.scss __ Centralización de parámetros usados en los estilos
+ |  ├─ layout
+ |  |  ├─container.scss
+ |  |  ├─header.scss
+ |  |  ├─index.scss
+ |  |  └─ menuMobile.scss
+ |  └─ layout
+ |     ├─ contentSection.scss
+ |     └─ detailResource.scss
+ |  
+ ├─ svg
+ |  └─ ...
+ ├─ types
+ |  └─ ...
+ └─ index.scss
+```
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Desarrollo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+<summary>Desplegar para ver algunas notas sobre el desarrollo</summary>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Esta web ha sido desarrollado con: HTML5, CSS3, SASS y REACT.
+- Se han usado mediaqueries para hacer la web responsive (diseño adaptable a los distintos dispositos).
+- Para los estilos se ha utilizado el preprocesador SASS y CSS3.
+- Para el control de versiones del proyecto se ha utilizado Git.
+- Además se han utilizado la librería: react-router-dom. Para la navegación entre secciones y el enrutamiento de la página de inicio a la página de detalle del recurso.
+- Almacenamiento en local: he almacenado los listados de favoritos en localStorage. De esta forma, al recargar la página los recursos seleccionados por los alumnos como favoritos seguirán apareciendo como favoritos y estarán nuevamente en la lista de favoritos por categoría desplegada al darle al botón "Ver favoritos". He almacenado todo el objeto debido a que no se tenía la posibilidad de tener una id única, ya que algunos recursos compartían id.
 
-### `npm run eject`
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## **Improvements**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<details>
+<summary>Desplegar para ver mejoras sugeridas para desarrollar a futuro en siguientes versiones</summary>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Realizar un slider para que si la lista de recursos en las secciones es mayor de 5, los alumnos puedan ver los recursos en una sola fila.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Implementar la funcionalidad de ordenar los recursos alfabéticamente.
 
-## Learn More
+- Realizar test con Jest.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+</details>
